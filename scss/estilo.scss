@@ -1,3 +1,61 @@
-h1{
-    font-size: larger;
+html{
+    font-size: 10px;
+}
+@mixin size($height, $width) {
+    height: $height;
+        width: $width;
+}
+// ------------------------------------------------------------------------------------
+.icono{
+    @include size(3.5rem, 3.5rem)
+}
+.blue{
+    color:   rgb(48, 95, 248);
+}
+.header{
+    display: flex;
+    background-color: rgb(13, 110, 253);
+    padding: 0 30rem;
+    li{
+        color: #343a40;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        font-size: 2rem;
+    }
+}
+.menu{
+    display: flex;
+    flex-flow: row wrap;
+}
+.presentacion{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 4rem;
+    img{
+        @include size(40rem, 30rem);
+        border-radius: 2rem;
+    }
+}
+.proyectos{
+    display: flex;
+    justify-content: center;
+    margin: 4rem;
+}
+.redes{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+.intro{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    margin: 4rem;
 }
